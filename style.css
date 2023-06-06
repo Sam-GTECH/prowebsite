@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jost&display=swap');
+@font-face {
+    font-family: 'Butler-Medium';
+    src: url('Butler-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+	--primary: #D6EF0E;
+	--second1: #1E1E1E;
+	--second2: #FFFFFF;
+}
+
+* {
+	color: var(--second2);
+}
+
+body {
+	background-color: var(--second1);
+	margin-top: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* You shan't drag the holy nfts (but you can right click on them) */
+img {
+	user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#bg img {
+	position: fixed;
+	z-index: -100;
+    left: 0;
+    top: 0;
+    mix-blend-mode: color-burn;
+    width: 100%;
+}
+
+span {
+	color: var(--primary);
+}
+
+nav {
+	display: flex;
+	font-family: 'Inter', sans-serif;
+	margin-top: 20px;
+}
+
+nav #navbar {
+	display: flex;
+	gap: 35px;
+}
+
+ul {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style: none;
+    max-width: 500px;
+}
+
+#focus {
+	border-bottom: var(--primary) solid 1px
+}
+
+#contact-button {
+	display: flex;
+}
+
+.summary {
+	display: flex;
+}
+
+.summary .left {
+	max-width: 30%;
+    line-height: 450%;
+}
+
+.summary .left p {
+	line-height: 25px;
+    width: 85%;
+}
+
+.summary .right {
+	margin-top: 30px;
+    margin-left: 500px;
+}
+
+.summary .right img {
+	position: relative;
+	max-width: 55%;
+	border-radius: 60px;
+}
+
+.summary .right .bid_square {
+	position: absolute;
+    top: 450px;
+    left: 1200px;
+    background-color: #131E3A;
+    border-radius: 16px;
+    border-top: 1px solid var(--primary);
+    padding: 15px;
+}
+
+.summary .right .bid_square .bid {
+	display: flex;
+    gap: 94px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.summary .right .bid_square button {
+	text-align: center;
+    margin: auto;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 16px;
+    padding: 12px;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-weight: 700;
+    margin-left: 15px;
+    margin-top: 10px;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.summary .right .bid_square button:hover {
+
+}
+
+h1, h2 {
+	font-family: 'Butler-Medium';
+}
+
+h1 {
+	font-size: 64px;
+}
+
+.colorPri {
+	color: var(--primary) !important;
+}
+
+.bold {
+	font-weight: 700 !important;
+}
+
+.glow {
+	position: fixed;
+    top: 200px;
+    left: 750px;
+	z-index: -1;
+    background-color: #1F413D;
+    width: 631px;
+    height: 438px;
+    filter: blur(200px);
+}
+
+.summary .left .buttons {
+	font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.summary .left .buttons .button1 {
+	background-color: var(--primary);
+    padding: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.summary .left .buttons .button2 {
+	border-radius: 8px;
+    padding: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.summary .left .stats {
+	display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.summary .left .stats .numbers {
+	font-family: 'Butler-Medium';
+	font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.summary .left .stats .vertibar {
+	background-color: var(--primary);
+    height: 80px;
+    width: 1px;
+}
