@@ -191,7 +191,7 @@ h1 {
     font-size: 16px;
 }
 
-.buttons .button1, .coolart .title a, nav a {
+.buttons .button1, .title a, nav a {
 	background-color: var(--primary);
     padding: 45px;
     padding-top: 15px;
@@ -330,4 +330,75 @@ h1 {
 .create .images .i2 {
 	grid-row: 1;
     grid-column: 18;
+}
+
+.popular {
+	padding-bottom: 50px;
+}
+
+.popular .title {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .gallery {
+	display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(30, 30px); /* I'm sure the grid could have be made better but oh well */
+    grid-template-rows: 320px auto;
+}
+
+.popular .gallery .i1 {
+    grid-column: 3;
+    grid-row: 1;
+}
+.popular .gallery .i2 {
+    grid-column: 9;
+    grid-row: 1;
+}
+.popular .gallery .i3 {
+    grid-column: 3;
+    grid-row: 2;
+}
+.popular .gallery .i4 {
+    grid-column: 11;
+    grid-row: 2;
+}
+.popular .gallery .i5 {
+    grid-column: 19;
+    grid-row: 1;
+}
+
+.contact {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .images {
+	position: relative;
+	height: 450px;
+}
+
+.contact .images .underImage {
+	position: relative;
+	transform: rotate(-10deg);
+}
+
+.contact .images .overImage {
+	position: absolute;
+	top: 100px;
+    left: 300px;
+}
+
+.contact .text .notForm h2 {
+	width: 100%;
+}
+
+.contact .text .notForm p {
+	width: 60%;
+    font-family: 'Inter';
 }
