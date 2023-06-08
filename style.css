@@ -50,8 +50,11 @@ span {
 
 nav {
 	display: flex;
-	font-family: 'Inter', sans-serif;
-	margin-top: 20px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    margin-top: 20px;
 }
 
 nav #navbar {
@@ -79,6 +82,7 @@ ul {
 
 .summary {
 	display: flex;
+    justify-content: space-between;
 }
 
 .summary .left {
@@ -92,24 +96,28 @@ ul {
 }
 
 .summary .right {
-	margin-top: 30px;
-    margin-left: 500px;
+	position: relative;
+	margin-top: 70px;
+    max-width: 30%;
+    max-height: initial;
 }
 
 .summary .right img {
-	position: relative;
-	max-width: 55%;
-	border-radius: 60px;
+	max-width: 80%;
+    border-radius: 60px;
+}
+
+.container {
+	background-color: #131E3A;
+    border-radius: 16px;
+    border-top: 1px solid var(--primary);
+    padding: 15px;
 }
 
 .summary .right .bid_square {
 	position: absolute;
-    top: 450px;
-    left: 1200px;
-    background-color: #131E3A;
-    border-radius: 16px;
-    border-top: 1px solid var(--primary);
-    padding: 15px;
+	top: 390px;
+    left: 174px;
 }
 
 .summary .right .bid_square .bid {
@@ -119,7 +127,7 @@ ul {
     font-family: 'Inter', sans-serif;
 }
 
-.summary .right .bid_square button {
+.container button {
 	text-align: center;
     margin: auto;
     background-color: transparent;
@@ -129,18 +137,26 @@ ul {
     padding-left: 70px;
     padding-right: 70px;
     font-weight: 700;
-    margin-left: 15px;
     margin-top: 10px;
     color: var(--primary);
     cursor: pointer;
 }
 
-.summary .right .bid_square button:hover {
+.container button:hover {
 
+}
+
+.container .bid_button {
+	text-align: center;
 }
 
 h1, h2 {
 	font-family: 'Butler-Medium';
+}
+
+h2 {
+	font-size: 48px;
+    width: 35%;
 }
 
 h1 {
@@ -156,14 +172,17 @@ h1 {
 }
 
 .glow {
-	position: fixed;
-    top: 200px;
-    left: 750px;
-	z-index: -1;
+	position: absolute;
+    z-index: -1;
     background-color: #1F413D;
     width: 631px;
     height: 438px;
     filter: blur(200px);
+}
+
+.summary .glow {
+	top: 90px;
+    right: 400px;
 }
 
 .summary .left .buttons {
@@ -172,18 +191,18 @@ h1 {
     font-size: 16px;
 }
 
-.summary .left .buttons .button1 {
+.buttons .button1, .coolart .title a, nav a {
 	background-color: var(--primary);
-    padding: 35px;
+    padding: 45px;
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.summary .left .buttons .button2 {
+.buttons .button2 {
 	border-radius: 8px;
-    padding: 15px;
+    padding: 25px;
     margin-left: 15px;
     cursor: pointer;
 }
@@ -204,4 +223,111 @@ h1 {
 	background-color: var(--primary);
     height: 80px;
     width: 1px;
+}
+
+.coolart {
+	position: relative;
+	padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.coolart .glow {
+	right: -300px;
+    bottom: -300px;
+}
+
+.coolart .title {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery {
+	display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.gallery .bid {
+	display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+}
+
+.gallery .bid .bid_part {
+	display: inline-flex;
+}
+
+.gallery .bid_bottom {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery .bid_bottom p, .gallery .bid_bottom button {
+	margin: 0;
+}
+
+.gallery .bid_bottom .bid_time {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+}
+
+.gallery .bid_bottom p.gray {
+	color: #838382;
+    font-size: 12px;
+}
+
+.gallery .bid_bottom .time {
+	display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-start;
+    margin-top: 3px;
+}
+
+.gallery .bid_bottom .time img {
+	max-width: 20px;
+}
+
+.create {
+	position: relative;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.create .text .text {
+	margin-bottom: 50px;
+	width: 410px;
+}
+
+.create .text .text h2 {
+	width: 100%;
+}
+
+.create .text .text p {
+	width: 90%;
+	line-height: 150%;
+}
+
+.create .images {
+	display: inline-grid;
+    grid-template-columns: repeat(38, 20px);
+    grid-template-rows: 25% 100px auto;
+}
+
+.create .images .i1 {
+	grid-column: 1;
+    grid-row: 2;
+    z-index: 1;
+}
+
+.create .images .i2 {
+	grid-row: 1;
+    grid-column: 18;
 }
