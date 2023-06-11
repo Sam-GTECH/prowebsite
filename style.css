@@ -64,8 +64,17 @@ nav #navbar {
 	gap: 35px;
 }
 
+a {
+	text-decoration: none;
+}
+
 #focus {
 	border-bottom: var(--primary) solid 1px
+}
+
+#right_nav {
+	display: flex;
+	gap:50px;
 }
 
 #contact-button {
@@ -132,10 +141,12 @@ nav #navbar {
     margin-top: 10px;
     color: var(--primary);
     cursor: pointer;
+    transition: 0.35s;
 }
 
 .container button:hover {
-
+	background-color: var(--primary);
+	color: var(--second1);
 }
 
 .container .bid_button {
@@ -177,13 +188,23 @@ h1 {
     right: 400px;
 }
 
+.create .glow {
+	right: -100px;
+    bottom: -50px;
+}
+
+.contact .glow {
+	top: -150px;
+    left: -100px;
+}
+
 .summary .left .buttons {
 	font-weight: 700;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
 }
 
-.buttons .button1, .title a, nav a {
+.buttons .button1, .title a, nav #contact-button {
 	background-color: var(--primary);
     padding: 45px;
     padding-top: 15px;
@@ -325,7 +346,7 @@ h1 {
 }
 
 .popular {
-	padding-bottom: 50px;
+	padding-bottom: 100px;
 }
 
 .popular .title {
@@ -397,7 +418,8 @@ h1 {
 }
 
 .contact {
-	padding-top: 50px;
+	position: relative;
+	padding-top: 100px;
 	padding-bottom: 50px;
 	display: flex;
     align-items: center;
