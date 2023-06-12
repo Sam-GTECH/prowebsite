@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jost&display=swap');
 @font-face {
     font-family: 'Butler-Medium';
-    src: url('Butler-Medium.ttf') format('truetype');
+    src: url('./font/Butler-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,6 +25,7 @@ body {
     margin-right: 100px;
     margin-bottom: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* You shan't drag the holy nfts (but you can right click on them) */
@@ -238,6 +239,10 @@ h1 {
     width: 1px;
 }
 
+#marketplace {
+	transition: 0.2s;
+}
+
 .coolart {
 	position: relative;
 	padding-top: 100px;
@@ -277,6 +282,7 @@ h1 {
 	display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5px;
 }
 
 .gallery .bid_bottom p, .gallery .bid_bottom button {
@@ -564,4 +570,223 @@ footer .copyright {
 footer .copyright .right {
 	display: flex;
 	gap: 50px;
+}
+
+table {
+	width: fit-content;
+	text-align: left;
+}
+
+table input, table button, table textarea {
+	color: var(--second1);
+}
+
+table textarea {
+	resize: none;
+	overflow: hidden;
+}
+
+.limit-images img {
+	width: 100px;
+	height: auto;
+}
+
+.container .bid_info {
+	margin-left: 20px;
+    margin-right: 20px;
+    border: var(--primary) solid 1px;
+    border-radius: 16px;
+    text-align: center;
+    font-family: 'inter';
+    font-size: 16px;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.container .bid_info .name {
+	color: var(--primary);
+    font-weight: 700;
+}
+
+.container .bid_info form {
+	padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.container .bid_info form input[type="number"] {
+	background-color: transparent;
+    border: var(--primary) solid 0.1px;
+    border-radius: 6px;
+}
+
+.container .bid_info form input[type="submit"] {
+	background-color: var(--primary);
+    border: var(--primary) solid 1px;
+    border-radius: 6px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.container .bid_info form input[type="submit"]:hover {
+	background-color: transparent;
+    border: var(--primary) solid 1px;
+    color: var(--primary);
+    border-radius: 6px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.opened_main_bid_container {
+	height: 230px !important;
+	opacity: 1 !important;
+}
+
+.opened_main_bid_button {
+	height: 60px;
+	overflow: hidden;
+}
+
+.opened_main_bid {
+	margin-top: 200px;
+    padding-top: 0;
+}
+
+.gallery_container {
+	margin-top: 20px !important;
+	margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.gallery_container form {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opened_gallery_1_bid_container {
+	height: 230px !important;
+	opacity: 1 !important;
+}
+.opened_gallery_1_bid_button {
+	height: 60px;
+	overflow: hidden;
+}
+.opened_gallery_2_bid_container {
+	height: 230px !important;
+	opacity: 1 !important;
+}
+.opened_gallery_2_bid_button {
+	height: 60px;
+	overflow: hidden;
+}
+.opened_gallery_3_bid_container {
+	height: 230px !important;
+	opacity: 1 !important;
+}
+.opened_gallery_3_bid_button {
+	height: 60px;
+	overflow: hidden;
+}
+
+.message, .error {
+	border: var(--primary) solid 1px;
+    background-color: var(--second1);
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    padding-left: 30px;
+}
+
+.message a {
+	color: var(--primary);
+    text-decoration: revert;
+}
+
+.user_main_infos {
+	display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user_text {
+	font-family: 'Inter';
+}
+
+.user_name {
+	font-weight: 700;
+}
+
+.admin_switch {
+    background-color: var(--primary);
+    border: var(--primary) solid 1px;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.admin_switch:hover {
+	background-color: transparent;
+	color: var(--primary);
+}
+
+.hidden {
+	display: none;
+}
+
+#adminpanel input[type="submit"],
+#userpanel input[type="submit"],
+#userpanel input[type="file"] {
+	color: var(--primary);
+	background-color: transparent;
+	padding: 15px;
+	border: var(--primary) solid 1px;
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+#adminpanel input[type="submit"]:hover,
+#userpanel input[type="submit"]:hover,
+#userpanel input[type="file"]:hover {
+	color: #131E3A;
+	background-color: var(--primary);
+}
+
+#adminpanel .param-table{
+    display: flex;
+    gap: 20px;
+}
+
+#userpanel .important:hover, #adminpanel .important:hover {
+	background-color: darkred !important;
+	color: var(--second2);
+	border: red solid 1px;
+}
+
+.login-contain input[type="text"],
+.login-contain input[type="email"],
+.login-contain input[type="password"]
+{
+	background-color: transparent;
+    border: var(--primary) solid 0.1px;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.login-contain input[type="submit"]
+{
+	color: var(--primary);
+	background-color: transparent;
+	padding: 15px;
+	border: var(--primary) solid 1px;
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+.login-contain input[type="submit"]:hover {
+	color: #131E3A;
+	background-color: var(--primary);
 }

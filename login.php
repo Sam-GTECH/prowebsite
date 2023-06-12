@@ -17,7 +17,7 @@
 </head>
 <body>
 	<div id="bg">
-		<img src="img/BG.png"/>
+		<img src="img/BG.webp"/>
 	</div>
 
 	<h1>Se connecter/S'inscrire à <span>NFT Marketplace!</span></h1>
@@ -32,7 +32,7 @@
 		unset($_SESSION['error'])
 	?>
 
-	<div>
+	<div class="container login-contain">
 		<div>
 			<h2>Se connecter</h2>
 			<form action="actions/login.php" method="post">

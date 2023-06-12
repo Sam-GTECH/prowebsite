@@ -1,7 +1,7 @@
 <footer>
 	<div class="footer_contact">
 		<div class="upper">
-			<div class="socials">
+			<div id="contact" class="socials">
 				<p><?php echo $data['text_contact'] ?></p>
 				<div class="icons">
 					<a href="<?php echo $data['facebook_contact'] ?>"><i class="fa-brands fa-facebook-f"></i></a>
